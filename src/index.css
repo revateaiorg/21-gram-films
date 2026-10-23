@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-nearblack: #050403;
+  --color-secondary: #0B0907;
+  --color-card-dark: #0D0B09;
+  --color-card-hover: #11100D;
+  --color-brand-primary: #39D98A;
+  --color-brand-secondary: #1FBF73;
+  --color-brand-bright: #67F2A9;
+  --color-brand-dark: #0D6B43;
+  
+  --font-heading: 'Inter Tight', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #050403;
+    color: #f4f4f5;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter Tight', sans-serif;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Marquee infinite scroll animation */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.3333%);
+  }
+}
+
+.marquee-strip {
+  animation: marquee-scroll 35s linear infinite;
+}
+
+.marquee-strip:hover {
+  animation-play-state: paused;
+}
