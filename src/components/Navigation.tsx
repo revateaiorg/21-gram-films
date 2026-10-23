@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
+import logoImg from '../assets/logo.png';
 
 export const Navigation: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -99,7 +100,7 @@ export const Navigation: React.FC = () => {
           >
             <div className="w-8 h-8 md:w-10 md:h-9 rounded-md flex items-center justify-center">
               <img
-                src="/src/assets/logo.png"
+                src={logoImg}
                 alt="21 Gram Films & Digital"
               />
             </div>

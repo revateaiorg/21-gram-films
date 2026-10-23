@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUp } from 'lucide-react';
+import logoImg from '../assets/logo.png';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -32,7 +33,7 @@ export const Footer: React.FC = () => {
             >
               <div className="w-8 h-8 md:w-10 md:h-9 rounded-md flex items-center justify-center">
                 <img
-                  src="/src/assets/logo.png"
+                  src={logoImg}
                   alt="21 Gram Films & Digital"
                 />
               </div>
