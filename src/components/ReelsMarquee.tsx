@@ -1,10 +1,10 @@
 import React, { useRef, useEffect, useCallback } from 'react';
-import Reel1 from '../assets/reel1.png';
-import Reel2 from '../assets/reel2.png';
-import Reel3 from '../assets/reel3.png';
-import Reel4 from '../assets/reel4.png';
-import Reel5 from '../assets/reel5.png';
-import Reel6 from '../assets/reel6.png';
+import Reel1 from '../assets/reel1.webp';
+import Reel2 from '../assets/reel2.webp';
+import Reel3 from '../assets/reel3.webp';
+import Reel4 from '../assets/reel4.webp';
+import Reel5 from '../assets/reel5.webp';
+import Reel6 from '../assets/reel6.webp';
 
 interface ReelCard {
   id: string;
