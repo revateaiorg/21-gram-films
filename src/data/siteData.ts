@@ -1,4 +1,10 @@
 import type { Project, Service, Metric, FAQ, ProcessStep, MediaItem } from '../types';
+import Reel1 from '../assets/reel1.png';
+import Reel2 from '../assets/reel2.png';
+import Reel3 from '../assets/reel3.png';
+import Reel4 from '../assets/reel4.png';
+import Reel5 from '../assets/reel5.png';
+import Reel6 from '../assets/reel6.png';
 
 export const HERO_DATA = {
   location: "CHENNAI / INDIA",
@@ -255,7 +261,6 @@ export const FAQ_DATA: FAQ[] = [
 // Local video file — place the downloaded reel inside public/videos/
 // Vite serves the public/ folder at the root, so /videos/reel.mp4 works directly.
 // When you get individual client videos, drop them in public/videos/ and update each videoUrl below.
-const DRIVE_REEL_URL = "/videos/reel1.mp4";
 
 export const CONTENT_SHOWCASE_DATA: MediaItem[] = [
   {
@@ -264,7 +269,7 @@ export const CONTENT_SHOWCASE_DATA: MediaItem[] = [
     client: "iBel Infra",
     category: "BRAND FILM",
     type: "film",
-    thumbnail: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop",
+    thumbnail: Reel1,
     videoUrl: "/videos/reel1.mp4",
     embedUrl: "https://www.instagram.com/reel/DbKWU0vskMK/",
     views: "240K",
@@ -276,7 +281,7 @@ export const CONTENT_SHOWCASE_DATA: MediaItem[] = [
     client: "Raack Academy",
     category: "REEL",
     type: "reel",
-    thumbnail: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=600&auto=format&fit=crop",
+    thumbnail: Reel2,
     videoUrl: "/videos/reel2.mp4",
     embedUrl: "https://www.instagram.com/reel/DbKWU0vskMK/",
     views: "1.2M",
@@ -288,7 +293,7 @@ export const CONTENT_SHOWCASE_DATA: MediaItem[] = [
     client: "Set Square",
     category: "WEBSITE PREVIEW",
     type: "website",
-    thumbnail: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=600&auto=format&fit=crop",
+    thumbnail: Reel3,
     videoUrl: "/videos/reel3.mp4",
     embedUrl: "https://www.instagram.com/reel/DbKWU0vskMK/",
     views: "95K",
@@ -300,7 +305,7 @@ export const CONTENT_SHOWCASE_DATA: MediaItem[] = [
     client: "Little Spartans",
     category: "CAMPAIGN CLIP",
     type: "reel",
-    thumbnail: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=600&auto=format&fit=crop",
+    thumbnail: Reel4,
     videoUrl: "/videos/reel4.mp4",
     embedUrl: "https://www.instagram.com/reel/DbKWU0vskMK/",
     views: "580K",
@@ -312,7 +317,7 @@ export const CONTENT_SHOWCASE_DATA: MediaItem[] = [
     client: "PR Bites",
     category: "PHOTOGRAPHY",
     type: "shoot",
-    thumbnail: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600&auto=format&fit=crop",
+    thumbnail: Reel5,
     videoUrl: "/videos/reel5.mp4",
     embedUrl: "https://www.instagram.com/reel/DbKWU0vskMK/",
     views: "310K",

@@ -1,5 +1,10 @@
 import React, { useRef, useEffect, useCallback } from 'react';
-import { Play } from 'lucide-react';
+import Reel1 from '../assets/reel1.png';
+import Reel2 from '../assets/reel2.png';
+import Reel3 from '../assets/reel3.png';
+import Reel4 from '../assets/reel4.png';
+import Reel5 from '../assets/reel5.png';
+import Reel6 from '../assets/reel6.png';
 
 interface ReelCard {
   id: string;
@@ -7,6 +12,7 @@ interface ReelCard {
   client: string;
   tag: string;
   video: string;
+  thumbnail: string;
 }
 
 const REEL_ITEMS: ReelCard[] = [
@@ -15,42 +21,48 @@ const REEL_ITEMS: ReelCard[] = [
     title: "AERIAL & STRUCTURAL",
     client: "iBel Infra",
     tag: "BRAND FILM",
-    video: "/videos/reel1.mp4"
+    video: "/videos/reel1.mp4",
+    thumbnail: Reel1
   },
   {
     id: "r2",
     title: "HIGH-TEMPO REELS",
     client: "Raack Academy",
     tag: "REEL PRODUCTION",
-    video: "/videos/reel2.mp4"
+    video: "/videos/reel2.mp4",
+    thumbnail: Reel2
   },
   {
     id: "r3",
     title: "DIGITAL ARCHITECTURE",
     client: "Set Square Structurals",
     tag: "WEB & SEO",
-    video: "/videos/reel3.mp4"
+    video: "/videos/reel3.mp4",
+    thumbnail: Reel3
   },
   {
     id: "r4",
     title: "COMMERCIAL CAMPAIGN",
     client: "Little Spartans",
     tag: "FILMS & ADS",
-    video: "/videos/reel4.mp4"
+    video: "/videos/reel4.mp4",
+    thumbnail: Reel4
   },
   {
     id: "r5",
     title: "CULINARY CINEMATOGRAPHY",
     client: "PR Bites",
     tag: "FOOD & BRAND",
-    video: "/videos/reel5.mp4"
+    video: "/videos/reel5.mp4",
+    thumbnail: Reel5
   },
   {
     id: "r6",
     title: "LIFESTYLE SHOOTS",
     client: "Urban Threads",
     tag: "FASHION",
-    video: "/videos/reel6.mp4"
+    video: "/videos/reel6.mp4",
+    thumbnail: Reel6
   }
 ];
 
@@ -154,20 +166,30 @@ export const ReelsMarquee: React.FC = () => {
               className="marquee-reel-card shrink-0 w-[170px] md:w-[225px] lg:w-[280px] rounded-2xl overflow-hidden bg-[#0D0B09] border border-white/10 cursor-pointer group will-change-transform"
               style={{ aspectRatio: '9/16' }}
             >
-              {/* Card image */}
-              <div className="relative w-full h-full overflow-hidden">
+              {/* Card media container */}
+              <div className="relative w-full h-full overflow-hidden bg-black">
+                {/* Layer 0: thumbnail shown immediately while video buffers */}
+                <img
+                  src={item.thumbnail}
+                  alt={item.title}
+                  className="absolute inset-0 w-full h-full object-cover object-center brightness-95"
+                  loading="eager"
+                />
+
+                {/* Layer 1: video with poster */}
                 <video
                   src={item.video}
+                  poster={item.thumbnail}
                   autoPlay
                   muted
                   loop
                   playsInline
                   preload="metadata"
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 brightness-95"
+                  className="relative z-[1] w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 brightness-95"
                 />
 
                 {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/40" />
+                <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/90 via-black/20 to-black/40 pointer-events-none" />
 
                 {/* Top tag badge */}
                 {/* <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-black/60 border border-white/10 backdrop-blur-sm text-[9px] tracking-wider text-zinc-300 uppercase font-mono">
