@@ -42,11 +42,11 @@ export const Hero: React.FC = () => {
           className="inline-flex items-center gap-3 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md mb-8"
         >
           <span className="w-2 h-2 rounded-full bg-[#39D98A] animate-ping" />
-          <span className="text-[11px] font-mono text-zinc-300 tracking-widest uppercase">
+          <span className="hidden sm:block text-[11px] font-mono text-zinc-300 tracking-widest uppercase">
             {HERO_DATA.location}
           </span>
-          <span className="text-zinc-600">|</span>
-          <span className="text-[11px] font-mono text-[#39D98A] tracking-widest uppercase font-semibold">
+          <span className="hidden sm:block text-zinc-600">|</span>
+          <span className="text-[11px] font-mono sm:text-[#39D98A] tracking-widest uppercase font-semibold">
             {HERO_DATA.tagline}
           </span>
         </motion.div>

@@ -29,7 +29,7 @@ export function App() {
           pointerEvents: isLoaded ? 'auto' : 'none',
         }}
       >
-      
+
         {/* 01 Navigation */}
         <Navigation />
 
@@ -59,7 +59,7 @@ export function App() {
           {/* <BentoSection /> */}
 
           {/* 10 Metrics / Proof Section */}
-          <MetricsSection />
+          {/* <MetricsSection /> */}
 
           {/* No - 11 Process Section */}
           {/* <ProcessSection /> */}

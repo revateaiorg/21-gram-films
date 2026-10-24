@@ -30,9 +30,9 @@ export const Navigation: React.FC = () => {
       {/* =========================================================
           DESKTOP / MAIN NAVIGATION
       ========================================================== */}
-     <header className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
-  <div
-    className={`
+      <header className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
+        <div
+          className={`
       w-full
       flex
       justify-center
@@ -40,9 +40,9 @@ export const Navigation: React.FC = () => {
       transition-all duration-500 ease-out
       ${scrolled ? 'pt-4 px-4 sm:px-6 lg:px-8' : ''}
     `}
-  >
-   <div
-  className={`
+        >
+          <div
+            className={`
     relative
     w-full
     pointer-events-auto
@@ -54,9 +54,8 @@ export const Navigation: React.FC = () => {
     duration-500
     ease-out
 
-    ${
-      scrolled
-        ? `
+    ${scrolled
+                ? `
           max-w-7xl
           px-4 sm:px-8
           py-3 sm:py-3.5
@@ -66,7 +65,7 @@ export const Navigation: React.FC = () => {
           border border-white/10
           shadow-[0_8px_40px_rgba(0,0,0,0.6)]
         `
-        : `
+                : `
           max-w-7xl
           px-4 sm:px-8
           py-4 sm:py-6
@@ -75,12 +74,12 @@ export const Navigation: React.FC = () => {
           border border-transparent
           shadow-none
         `
-    }
+              }
   `}
->
+          >
 
-          {/* Ambient glow — only visible when floating */}
-          {/* <div
+            {/* Ambient glow — only visible when floating */}
+            {/* <div
             className={`
               absolute inset-0 overflow-hidden rounded-[28px]
               pointer-events-none
@@ -91,53 +90,52 @@ export const Navigation: React.FC = () => {
             <div className="absolute -top-20 -left-20 w-72 h-72 rounded-full bg-[#39D98A]/20 blur-[100px]" />
           </div> */}
 
-          {/* =====================================================
+            {/* =====================================================
               LOGO
           ====================================================== */}
-          <a
-            href="#"
-            className="relative z-10 flex items-center gap-2 group text-left"
-          >
-            <div className="w-8 h-8 md:w-10 md:h-9 rounded-md flex items-center justify-center">
-              <img
-                src={logoImg}
-                alt="21 Gram Films & Digital"
-              />
-            </div>
+            <a
+              href="#"
+              className="relative z-10 flex items-center gap-2 group text-left"
+            >
+              <div className="w-8 h-8 md:w-10 md:h-9 rounded-md flex items-center justify-center">
+                <img
+                  src={logoImg}
+                  alt="21 Gram Films & Digital"
+                />
+              </div>
 
-            <div className="flex flex-col">
-              <span className="font-heading font-extrabold text-sm sm:text-xl tracking-widest text-white leading-none">
-                21GRAM
-              </span>
+              <div className="flex flex-col">
+                <span className="font-heading font-extrabold text-sm sm:text-xl tracking-widest text-white leading-none">
+                  21GRAM
+                </span>
 
-              <span className="text-[10px] font-mono text-zinc-400 tracking-widest leading-none mt-0.5">
-                FILMS & DIGITAL
-              </span>
-            </div>
-          </a>
+                <span className="text-[10px] font-mono text-zinc-400 tracking-widest leading-none mt-0.5">
+                  FILMS & DIGITAL
+                </span>
+              </div>
+            </a>
 
-          {/* =====================================================
+            {/* =====================================================
               DESKTOP NAV LINKS
           ====================================================== */}
-          <nav
-            className={`
+            <nav
+              className={`
               relative z-10
               hidden md:flex items-center gap-8
               px-6 py-2.5
               rounded-full
               transition-all duration-500
-              ${
-                scrolled
+              ${scrolled
                   ? 'bg-transparent border border-transparent'
                   : 'bg-white/[0.03] backdrop-blur-sm border border-white/5'
-              }
+                }
             `}
-          >
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="
+            >
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="
                   text-[13px]
                   font-mono
                   font-medium
@@ -149,11 +147,11 @@ export const Navigation: React.FC = () => {
                   py-2 px-1
                   group
                 "
-              >
-                {link.name}
+                >
+                  {link.name}
 
-                <span
-                  className="
+                  <span
+                    className="
                     absolute
                     bottom-0
                     left-0
@@ -164,18 +162,18 @@ export const Navigation: React.FC = () => {
                     transition-all
                     duration-300
                   "
-                />
-              </a>
-            ))}
-          </nav>
+                  />
+                </a>
+              ))}
+            </nav>
 
-          {/* =====================================================
+            {/* =====================================================
               RIGHT CTA
           ====================================================== */}
-          <div className="relative z-10 hidden md:flex items-center">
-            <a
-              href="#contact"
-              className="
+            <div className="relative z-10 hidden md:flex items-center">
+              <a
+                href="#contact"
+                className="
                 group
                 relative
                 inline-flex
@@ -195,52 +193,49 @@ export const Navigation: React.FC = () => {
                 shadow-[0_0_15px_rgba(57,217,138,0.15)]
                 hover:shadow-[0_0_25px_rgba(57,217,138,0.4)]
               "
-            >
-              <span className="text-[13px] font-mono font-bold tracking-wider">
-                LET'S TALK
-              </span>
+              >
+                <span className="text-[13px] font-mono font-bold tracking-wider">
+                  LET'S TALK
+                </span>
 
-              <ArrowUpRight
-                className="
+                <ArrowUpRight
+                  className="
                   w-3.5
                   h-3.5
                   group-hover:translate-x-0.5
                   group-hover:-translate-y-0.5
                   transition-transform
                 "
-              />
-            </a>
-          </div>
+                />
+              </a>
+            </div>
 
-          {/* =====================================================
+            {/* =====================================================
               MOBILE MENU BUTTON
           ====================================================== */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="
               relative
               z-10
               md:hidden
               p-2.5
-              rounded-xl
-              bg-[#0B0907]
-              border
-              border-white/10
+              rounded-xl              
               text-white
               hover:text-[#39D98A]
               transition-colors
             "
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? (
-              <X className="w-5 h-5 text-[#39D98A]" />
-            ) : (
-              <Menu className="w-5 h-5" />
-            )}
-          </button>
-       </div>
-      </div>
-    </header>
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? (
+                <X className="w-5 h-5 text-[#39D98A]" />
+              ) : (
+                <Menu className="w-5 h-5" />
+              )}
+            </button>
+          </div>
+        </div>
+      </header>
 
       {/* =========================================================
           FULLSCREEN MOBILE NAVIGATION

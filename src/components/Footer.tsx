@@ -83,11 +83,11 @@ export const Footer: React.FC = () => {
           <div>
             © 2026 21GRAM FILMS. ALL RIGHTS RESERVED.
           </div>
-          <div className="flex gap-6">
+          {/* <div className="flex gap-6">
             <a href="https://www.21gramfilms.com/" className="hover:text-zinc-400 transition-colors">21gramfilms.com</a>
             <a href="#" className="hover:text-zinc-400 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-zinc-400 transition-colors">Terms & Conditions</a>
-          </div>
+          </div> */}
         </div>
 
       </div>
